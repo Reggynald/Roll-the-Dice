@@ -29,3 +29,22 @@ Each round, both you and the enemy roll a six-sided die. Whoever rolls higher wi
 git clone https://github.com/Reggynald/Roll-the-Dice.git
 cd Roll-the-Dice/"Roll the Dice"
 dotnet run
+
+Alternatively, open Roll the Dice.sln in Visual Studio and press F5.
+Project structure
+
+Roll-the-Dice/
+├── Roll the Dice.sln
+└── Roll the Dice/
+    ├── Program.cs        # Entry point
+    ├── Dice.cs           # Dice rolling logic
+    ├── Player.cs         # Player state (name, score)
+    ├── DiceRenderer.cs   # Console rendering & animations
+    └── Game.cs           # Game loop and round logic
+
+What I learned / practiced
+
+This project was a refactoring exercise: it started as a single Main method with all logic inline, and was restructured into separate classes with clear responsibilities (single responsibility principle), encapsulated state (private setters), and a simple rendering layer separated from game logic.
+Roadmap
+
+A second version, Roll the Dice: Race, is in progress — instead of a fixed number of rounds, players race to a target score, with random power-ups (double points, steal points, and more) triggered along the way.
